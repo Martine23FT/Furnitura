@@ -38,7 +38,9 @@ h2 {
 h3 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
-	padding-top: 4%;
+	padding-top: 8%;
+	font-size: 1.1rem;
+	margin: 0;
 }
 
 /*----------------HEADER----------------*/
@@ -96,7 +98,7 @@ header {
 	color: white;
 }
 
-/*----------------MAIN----------------*/
+/*-------------BACKGROUND---------------*/
 
 .background {
 	width: 75%;
@@ -112,16 +114,17 @@ header {
 	position: fixed;
 }
 
-/*----------------SECTION----------------*/
+/*-------------OTHER CONTENT---------------*/
 
-.other-content {
+.content {
 	position: absolute;
 	top: 1050px;
 	width: 75%;
 }
 
 .bottom {
-	height: 880px;
+	height: fit-content;
+	padding: 2% 0%;
 	width: 100%;
 	display: flex;
 	align-items: top;
@@ -131,13 +134,24 @@ header {
 }
 
 .info {
-	width: 35%;
-	padding: 5% 0% 0% 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 30%;
+	margin-left: 10%;
 }
 
 .title h1,
 .title h2 {
 	margin: 0;
+}
+
+.prod-info {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	color: #1e2318;
+	line-height: 2;
 }
 
 #product-img {
@@ -147,43 +161,19 @@ header {
 	padding: 10% 0% 0% 10%;
 }
 
-.colors,
+.circle,
 .sizes {
 	display: flex;
-	gap: 25px;
+	gap: 20px;
 }
 
-.circles {
-	height: 40px;
-	width: 40px;
-	border-radius: 40px;
-	border: 2px solid grey;
+.sizes {
+	padding-top: 2%;
+	font-family: 'Lato', sans-serif;
+	font-size: .9rem;
 }
 
-.circles:hover {
-	transform: scale(1.1);
-	cursor: pointer;
-}
-
-#circle1 {
-	background-color: black;
-}
-
-#circle2 {
-	background-image: url(/images/eik.jpg);
-	background-size: cover;
-}
-
-#circle3 {
-	background-image: url(/images/mørkeik.jpg);
-	background-size: cover;
-}
-
-#circle4 {
-	background-color: white;
-}
-
-.options {
+.size {
 	height: 42px;
 	width: 56px;
 	background-color: #E6E6E6;
@@ -192,18 +182,65 @@ header {
 	align-items: center;
 	justify-content: center;
 	box-sizing: border-box;
+	border: none;
 }
 
-.options:hover {
+.size:hover {
 	transform: scale(1.1);
 	transition: .6s;
 	cursor: pointer;
-	border: 1px solid #2E2C21;
+	border: 1px solid #454232;
 }
 
-.price {
+#color-container {
+	padding-top: 5%;
+}
+
+.circle {
+	height: 40px;
+	width: 40px;
+	border-radius: 40px;
+	border: 2px solid grey;
+}
+
+.circle:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+.colors {
 	display: flex;
-	gap: 40px;
+	padding: 2% 0%;
+	gap: 20px;
+}
+
+.circle {
+	height: 40px;
+	width: 40px;
+	border-radius: 40px;
+	border: 2px solid grey;
+	cursor: pointer;
+}
+
+.circle:hover {
+	transform: scale(1.1);
+	transition: .6s;
+}
+
+#color1 {
+	background-color: black;
+}
+
+#color2 {
+	background-image: url(/images/mørkeik.jpg);
+}
+
+#color3 {
+	background-image: url(/images/eik.jpg);
+}
+
+#color4 {
+	background-color: white;
 }
 
 .line {
@@ -211,35 +248,41 @@ header {
 	background-color: black;
 	opacity: 50%;
 	width: 80%;
-	margin-top: 50px;
+	margin: 5% 0%;
 }
 
-#total,
-#price {
-	font-size: 1.1rem;
-	padding-top: 3%;
+.quantity {
+	padding: 4% 0%;
+	display: flex;
+	align-items: center;
 }
 
-.btn {
-	display: inline-block;
-	padding: 15px 36px;
-	margin: 10px 0;
-	color: #313927;
-	background-color: white;
-	text-decoration: none;
-	font-size: .9rem;
+.select {
+	margin-left: 4%;
+	display: flex;
+	gap: 8%;
+}
+
+#instock {
+	height: 40px;
+	width: 130px;
+	box-sizing: border-box;
+}
+
+#addToCart {
+	height: 40px;
+	width: 130px;
 	border-radius: 40px;
-	font-family: 'Lato', sans-serif;
-	font-weight: 400;
-	letter-spacing: 2px;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
-	border: 1.5px solid #313927;
+	border: 1.5px solid #1e2318;
+	color: #1e2318;
 	cursor: pointer;
 }
 
-.btn:hover {
+#addToCart:hover {
+	background-color: #1e2318;
+	color: white;
 	transform: scale(1.1);
-	transition: .4s;
+	transition: .6s;
 }
 
 .background-2 {
@@ -249,6 +292,17 @@ header {
 	background-size: cover;
 	background-position: 30% 70%;
 }
+
+
+
+/*<div class="quantity">
+                <span>Quantity:</span>
+
+                <div class="select">
+                    <input id="instock" type="number" min="0" max="10">
+                    <button id="addToCart">ADD TO CART</button>
+                </div>
+            </div>
 
 /*----------------FOOTER----------------*/
 
