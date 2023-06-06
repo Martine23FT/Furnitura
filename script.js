@@ -12,9 +12,6 @@ var tv = {
     colors:["Black", "Dark Oak", "Light Oak", "White"],
 }
 
-var inStock = true;
-
-
 console.log(tv);
 
 document.getElementById("brand").innerHTML = tv.brand;
