@@ -100,18 +100,20 @@ header {
 
 /*-------------BACKGROUND---------------*/
 
-.background {
+.slideshow-container {
+    max-width: 100%;
 	width: 75%;
-	height: 900px;
-	background-image: url(/images/theframe.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 20% 20%;
-	display: flex;
-	align-items: flex-end;
-	justify-content: end;
+    margin: auto;
 	margin-top: 150px;
 	position: fixed;
+}
+
+.slideshow-container img {
+	width: 100%;
+	height: 900px;
+	display: none;
+	margin: 0 auto;
+	object-fit: cover;
 }
 
 /*-------------OTHER CONTENT---------------*/
@@ -293,16 +295,6 @@ header {
 	background-position: 30% 70%;
 }
 
-
-
-/*<div class="quantity">
-                <span>Quantity:</span>
-
-                <div class="select">
-                    <input id="instock" type="number" min="0" max="10">
-                    <button id="addToCart">ADD TO CART</button>
-                </div>
-            </div>
 
 /*----------------FOOTER----------------*/
 
